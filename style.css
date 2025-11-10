@@ -1,0 +1,385 @@
+/* === СБРОС СТИЛЕЙ === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === ОСНОВНОЙ КОНТЕЙНЕР === */
+.main {
+  background-image: url(./background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+/* === ГРУППОВОЙ ЭТАП === */
+.group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.list,
+.mvp-group,
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 30px;
+  border: 1px solid hsla(0, 8%, 70%, 0.7);
+  border-radius: 10px;
+  color: hsla(300, 56%, 41%, 0.9);
+  background: hsla(0, 8%, 70%, 0.35);
+  box-shadow: 0 0 25px 6px rgba(255, 255, 255, 0.35);
+}
+
+.title {
+  color: #ff78d6;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+  align-self: center;
+  animation: textPulse 3s ease-in-out infinite;
+}
+
+.list-item,
+.stats,
+.infoEl {
+  list-style: none;
+  color: #ead7ff;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 600;
+}
+
+.grp-styles {
+  font-family: "Orbitron", sans-serif;
+  background: rgba(10, 0, 30, 0.7);
+  border: 2px solid #9d4bff;
+  box-shadow: 0 0 15px #9d4bff, inset 0 0 10px #3d007d;
+  border-radius: 20px;
+  position: relative;
+  animation: groupGlow 4s ease-in-out infinite;
+}
+
+/* === MVP === */
+.mvp-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 35px;
+  font-family: "Orbitron", sans-serif;
+  color: #e5d6ff;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba(15, 0, 40, 0.75);
+  border: 2px solid #7f00ff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #7f00ff, inset 0 0 10px #3d007d;
+  animation: mvpGlow 4s ease-in-out infinite;
+}
+
+.stats {
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #9d4bff, 0 0 20px #00e5ff;
+  animation: statsPulse 3.5s ease-in-out infinite;
+}
+
+/* === ПЛЕЙ-ОФФ === */
+.TOPsection {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.play-off {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 60%;
+  margin-left: 40px;
+}
+
+.play-off__round {
+  display: flex;
+  justify-content: start;
+  gap: 150px;
+  position: relative;
+}
+
+.play-off__round.final {
+  justify-content: end;
+}
+
+.round {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.second {
+  position: absolute;
+  top: 52px;
+  left: 360px;
+}
+
+.secondD {
+  position: absolute;
+  bottom: 52px;
+  left: 360px;
+}
+
+.team {
+  padding: 8px;
+  border: 1px solid hsla(0, 8%, 70%, 0.7);
+  border-radius: 5px;
+  background: hsla(0, 8%, 70%, 0.35);
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 600;
+  position: relative;
+  color: #ead7ff;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 10px 4px hsla(0, 8%, 70%, 0.7);
+}
+
+.TM-styles {
+  background: rgba(30, 0, 60, 0.85);
+  border-left: 4px solid #6a00ff;
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+/* === ЛИНИИ ПЛЕЙ-ОФФ === */
+.team.top::before,
+.team.down::before,
+.team.top::after,
+.team.down::after,
+.hr,
+.hr-final,
+.hr-final-top,
+.hr-final-left,
+.hr-final-top.SSS,
+.hr-final-left.SSS {
+  background: linear-gradient(90deg, #7f00ff, #00e5ff, #7f00ff);
+  background-size: 300% 100%;
+  animation: neonFlow 3s linear infinite;
+  border-radius: 2px;
+}
+
+.team.top::before,
+.team.down::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 40px;
+  margin-left: 166px;
+  margin-top: 34.8px;
+}
+
+.team.top::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 45px;
+  width: 5px;
+  margin-left: 205px;
+  margin-top: 35px;
+}
+
+.team.down::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 59px;
+  width: 5px;
+  margin-left: 205px;
+  margin-top: -19px;
+}
+
+.hr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 151px;
+  margin-top: 32.8px;
+  margin-left: -152px;
+}
+
+.hr-final {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 60px;
+  margin-top: 32.8px;
+  margin-left: -64px;
+}
+
+.hr-final-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 87px;
+  width: 5px;
+  margin-top: -50px;
+  margin-left: -64px;
+}
+
+.hr-final-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 68px;
+  margin-top: -50px;
+  margin-left: -132px;
+}
+
+.hr-final-top.SSS {
+  margin-top: 33px;
+  height: 94px;
+}
+
+.hr-final-left.SSS {
+  margin-top: 122px;
+}
+
+/* === СОЦСЕТИ / ИНФО === */
+.info {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  top: 80px;
+  left: 78%;
+}
+
+.social-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-family: "Orbitron", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba(20, 0, 50, 0.6);
+  border: 2px solid #ff00ff;
+  border-radius: 25px;
+  box-shadow: 0 0 25px #ff00ff, inset 0 0 15px #660099;
+  backdrop-filter: blur(10px);
+  animation: socialGlow 6s ease-in-out infinite;
+}
+
+.social-block span {
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #ff00ff, 0 0 15px #00e5ff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-block span:hover {
+  color: #00e5ff;
+  transform: scale(1.1);
+  text-shadow: 0 0 15px #00e5ff, 0 0 30px #ff00ff;
+}
+
+/* === АНИМАЦИИ === */
+@keyframes neonFlow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+@keyframes groupGlow {
+  0% {
+    box-shadow: 0 0 10px #9d4bff, 0 0 20px #ff78d6, inset 0 0 10px #3d007d;
+    border-color: #9d4bff;
+  }
+  50% {
+    box-shadow: 0 0 25px #ff78d6, 0 0 50px #9d4bff, inset 0 0 20px #6a00ff;
+    border-color: #ff78d6;
+  }
+  100% {
+    box-shadow: 0 0 10px #9d4bff, 0 0 20px #ff78d6, inset 0 0 10px #3d007d;
+    border-color: #9d4bff;
+  }
+}
+
+@keyframes mvpGlow {
+  0% {
+    box-shadow: 0 0 15px #7f00ff, inset 0 0 10px #3d007d;
+    border-color: #7f00ff;
+  }
+  50% {
+    box-shadow: 0 0 30px #00e5ff, inset 0 0 20px #7f00ff;
+    border-color: #00e5ff;
+  }
+  100% {
+    box-shadow: 0 0 15px #7f00ff, inset 0 0 10px #3d007d;
+    border-color: #7f00ff;
+  }
+}
+
+@keyframes statsPulse {
+  0%,
+  100% {
+    color: #dcb8ff;
+    text-shadow: 0 0 5px #00e5ff, 0 0 15px #7f00ff;
+  }
+  50% {
+    color: #ffffff;
+    text-shadow: 0 0 15px #00e5ff, 0 0 30px #7f00ff;
+  }
+}
+
+@keyframes textPulse {
+  0%,
+  100% {
+    text-shadow: 0 0 5px #ff78d6, 0 0 15px #9d4bff;
+    color: #ff78d6;
+  }
+  50% {
+    text-shadow: 0 0 15px #ffb3f0, 0 0 30px #c58fff;
+    color: #ffb3f0;
+  }
+}
+
+@keyframes socialGlow {
+  0% {
+    border-color: #ff00ff;
+    box-shadow: 0 0 25px #ff00ff, inset 0 0 10px #7f00ff;
+  }
+  50% {
+    border-color: #00e5ff;
+    box-shadow: 0 0 35px #00e5ff, inset 0 0 15px #7f00ff;
+  }
+  100% {
+    border-color: #ff00ff;
+    box-shadow: 0 0 25px #ff00ff, inset 0 0 10px #7f00ff;
+  }
+}
